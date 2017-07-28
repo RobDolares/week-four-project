@@ -16,8 +16,8 @@ function querySubmit() {
 
   queryResults.innerHTML = "";
   // User input to append to the fetch request
-  let userQuery = queryInput.value;
-  userQuery = userQuery.replace(/ /g,'+');
+  let userQuery = queryInput.value.replace(/ /g,'+');
+  // userQuery = userQuery.replace(/ /g,'+');
 
   fetch(`https://itunes.apple.com/search?term=${userQuery}`)
 
